@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <div>
+        <h1>Olá mundo</h1>
+    </div>
+
+    <form action="/colaborador/cadastro" method="post">
+        <div>
+            <label for="campo-nome">Nome</label>
+            <input type="text" name="nome" id="campo-nome" />
+        </div>
+
+        <div>
+            <label for="campo-sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="campo-sobrenome" />
+        </div>
+
+        <button type="submit">Salvar</button>
+
+    </form>
+</body>
+</html>
