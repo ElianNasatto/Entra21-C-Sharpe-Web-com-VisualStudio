@@ -1,0 +1,9 @@
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\bin\Debug\Repositorio.dll
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\bin\Debug\Repositorio.pdb
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\bin\Debug\Model.dll
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\bin\Debug\Model.pdb
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\obj\Debug\Repositorio.csproj.CoreCompileInputs.cache
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\obj\Debug\Repositorio.dll
+T:\Documentos\GitHub\Exemplo-Entra21-C-Sharpe-Web-com-VisualStudio\ExemploWeb01\Repositorio\obj\Debug\Repositorio.pdb

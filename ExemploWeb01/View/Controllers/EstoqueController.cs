@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model;
+using Repositorio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,14 @@ namespace View.Controllers
 {
     public class EstoqueController : Controller
     {
-        // GET: Estoque
+        EstoqueRepositorio repositorio = new EstoqueRepositorio();
+
         public ActionResult Index()
         {
+            List<Estoque> estoques = repositorio.ObterTodos("");
+
+            ViewBag.Estoques = estoques;
+
             return View();
         }
     }

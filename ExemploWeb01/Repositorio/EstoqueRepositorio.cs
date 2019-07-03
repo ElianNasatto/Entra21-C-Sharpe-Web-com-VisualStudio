@@ -30,7 +30,7 @@ namespace Repositorio
         public List<Estoque> ObterTodos(string busca)
         {
             SqlCommand comando = conexao.Conectar();
-            comando.CommandText = "SELECT * FROM estoques WHERE nome LIKE @NOME";
+            comando.CommandText = "SELECT * FROM estoques";
             comando.Parameters.AddWithValue("@NOME", busca);
 
             List<Estoque> estoques = new List<Estoque>();
