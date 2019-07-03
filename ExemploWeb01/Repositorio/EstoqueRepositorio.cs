@@ -66,7 +66,7 @@ namespace Repositorio
         public bool Atualizar(Estoque estoque)
         {
             SqlCommand comando = conexao.Conectar();
-            comando.CommandText = @"UPDATE estoques SET nome = @NOME,valor=@VALOR,quantidade = @QUANTIDADE WHERE id = @id ,quantidade) VALUES (@NOME,@VALOR,@QUANTIDADE)";
+            comando.CommandText = @"UPDATE estoques SET nome = @NOME,valor=@VALOR,quantidade = @QUANTIDADE WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", estoque.Id);
             comando.Parameters.AddWithValue("@NOME", estoque.Nome);
             comando.Parameters.AddWithValue("@VALOR", estoque.Valor);

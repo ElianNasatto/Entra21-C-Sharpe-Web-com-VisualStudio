@@ -50,6 +50,15 @@ namespace View.Controllers
             return View();
         }
 
-       // public Action Update(int id,string nome, int quantidade, decimal valor)
+        public ActionResult Update(int id,string nome, int quantidade, decimal valor)
+        {
+            Estoque estoque = new Estoque();
+            estoque.Id = id;
+            estoque.Nome = nome;
+            estoque.Quantidade = quantidade;
+            estoque.Valor = valor;
+            repositorio.Atualizar(estoque);
+            return RedirectToAction("Index");
+        }
     }
 }
