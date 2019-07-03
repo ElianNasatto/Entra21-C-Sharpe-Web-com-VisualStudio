@@ -24,7 +24,7 @@ namespace Repositorio
             //Insere no banco e retorna o id do registro inserido
             int id = Convert.ToInt32(comando.ExecuteScalar());
             comando.Connection.Close();
-            return id;                           
+            return id;
         }
 
         public List<Estoque> ObterTodos(string busca)
@@ -37,7 +37,7 @@ namespace Repositorio
             DataTable tabela = new DataTable();
 
 
-           tabela.Load(comando.ExecuteReader());
+            tabela.Load(comando.ExecuteReader());
 
             for (int i = 0; i < tabela.Rows.Count; i++)
             {
@@ -53,17 +53,17 @@ namespace Repositorio
             return estoques;
         }
 
-        public bool Excluir(int id)
+        public void Apagar(int id)
         {
             SqlCommand comando = conexao.Conectar();
             comando.CommandText = "DELETE FROM estoques WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
             comando.ExecuteNonQuery();
             comando.Connection.Close();
-            return true;
+
         }
 
-        public int Alterar(Estoque estoque)
+        public bool Atualizar(Estoque estoque)
         {
             SqlCommand comando = conexao.Conectar();
             comando.CommandText = @"UPDATE estoques SET nome = @NOME,valor=@VALOR,quantidade = @QUANTIDADE WHERE id = @id ,quantidade) VALUES (@NOME,@VALOR,@QUANTIDADE)";
@@ -72,9 +72,41 @@ namespace Repositorio
             comando.Parameters.AddWithValue("@VALOR", estoque.Valor);
             comando.Parameters.AddWithValue("@QUANTIDADE", estoque.Quantidade);
             //Insere no banco e retorna o id do registro inserido
-            int id = Convert.ToInt32(comando.ExecuteScalar());
+            int afetada = Convert.ToInt32(comando.ExecuteNonQuery());
             comando.Connection.Close();
-            return id;
+            if (afetada != 0)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public Estoque ObterPeloId(int id)
+        {
+            SqlCommand comando = conexao.Conectar();
+            comando.CommandText = "SELECT * FROM estoques WHERE id=@ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            DataTable tabela = new DataTable();
+            tabela.Load(comando.ExecuteReader());
+
+            if (tabela.Rows.Count == 1)
+            {
+                DataRow linha = tabela.Rows[0];
+                Estoque estoque = new Estoque();
+                estoque.Id = Convert.ToInt32(linha["id"]);
+                estoque.Nome = linha["nome"].ToString();
+                estoque.Quantidade = Convert.ToInt32(linha["quantidade"]);
+                estoque.Valor = Convert.ToDecimal(linha["valor"]);
+                return estoque;
+            }
+            else
+            {
+                return null;
+            }
         }
 
 

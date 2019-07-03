@@ -20,5 +20,36 @@ namespace View.Controllers
 
             return View();
         }
+
+        public ActionResult Cadastro()
+        {
+            return View();
+        }
+
+        public ActionResult Store(string nome, int quantidade, decimal valor)
+        {
+            Estoque estoque = new Estoque();
+            estoque.Nome = nome;
+            estoque.Quantidade = quantidade;
+            estoque.Valor = valor;
+
+            int id = repositorio.Inserir(estoque);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Apagar(int id)
+        {
+            repositorio.Apagar(id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Editar(int id)
+        {
+            Estoque estoque = repositorio.ObterPeloId(id);
+            ViewBag.Estoque = estoque;
+            return View();
+        }
+
+       // public Action Update(int id,string nome, int quantidade, decimal valor)
     }
 }

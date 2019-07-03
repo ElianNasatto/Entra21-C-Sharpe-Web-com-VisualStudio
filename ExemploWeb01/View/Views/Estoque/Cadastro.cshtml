@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+        <a href="/estoque">Lista de estoques</a>
+    </div>
+
+    <form action="/estoque/store" method="post">
+        <div>
+            <label for="cmapo-nome">Nome</label>
+            <input type="text" name="nome" id="campo-nome" />
+        </div>
+        <div>
+            <label for="campo-quantidade">Quantidade</label>
+            <input type="text" name="quantidade" id="campo-quantidade" />
+        </div>
+        <label for="campo-valor">Valor</label>
+        <input type="text" name="valor" id="campo-valor" />
+        <br />
+        <button type="submit">Salvar</button>
+    </form>
+
+</body>
+</html>

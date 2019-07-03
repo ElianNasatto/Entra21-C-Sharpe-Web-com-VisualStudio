@@ -11,7 +11,7 @@
 <head>
 
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Lista de estoque</title>
 
 </head>
 
@@ -25,10 +25,12 @@
 
         <thead>
             <tr>
-                <td>Código</td>
-                <td>Nome</td>
-                <td>Quantidade</td>
-                <td>Valor</td>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Ação</th>
+
             </tr>
         </thead>
 
@@ -40,6 +42,10 @@
                 <td>@ViewBag.Estoques[i].Nome</td>
                 <td>@ViewBag.Estoques[i].Quantidade</td>
                 <td>@ViewBag.Estoques[i].Valor</td>
+                <td>
+                    <a href="/estoque/editar?id=@ViewBag.Estoques[i].Id">Editar</a>
+                    <a href="/estoque/apagar?id=@ViewBag.Estoques[i].Id">Apagar</a>
+                </td>
 
             </tr>
             }
@@ -48,10 +54,11 @@
 
         <tfoot>
             <tr>
-                <td>Código</td>
-                <td>Nome</td>
-                <td>Quantidade</td>
-                <td>Valor</td>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Ação</th>
             </tr>
         </tfoot>
     </table>
