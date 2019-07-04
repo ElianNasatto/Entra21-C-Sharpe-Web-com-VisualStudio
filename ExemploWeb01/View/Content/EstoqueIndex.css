@@ -1,0 +1,86 @@
+﻿body {
+    background-color: lightsalmon;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table {
+    width: 95%;
+    margin-left: 3%
+}
+
+/*Coluna do cabeçalho e rodapé*/
+th {
+    background-color: white;
+}
+
+
+/*Cada linha terá 30px de altura*/
+tr {
+    height: 30px;
+    background-color: wheat;
+}
+
+tr, th {
+    border: 2px solid black;
+}
+
+    /*Quando a linha for par tera uma cor diferente*/
+    tr:nth-child(even) {
+        background-color: burlywood;
+    }
+
+    /*Quando o mouse passar por cima da linha irá mudar a cor*/
+    tr:hover {
+        background-color: tomato;
+        cursor: pointer;
+    }
+
+    /* Ajusta o tamanho da fonte */
+td {
+    font-size: large;
+}
+
+
+/* Cria o design do botao cadastrar*/
+#botao-cadastro {
+    background-color: tan;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    width: 67px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    margin-right: 2.20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/*Quando o moue estiver sobreo botao este muda o design*/
+#botao-cadastro:hover {
+        background-color: brown;
+        color:white;
+}
+
+table a {
+    background-color: tan;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    width: 55px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    table a:hover {
+        background-color: brown;
+        color: white;
+    }
+
+
