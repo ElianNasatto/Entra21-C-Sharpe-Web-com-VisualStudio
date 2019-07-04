@@ -1,0 +1,50 @@
+﻿body {
+    background-color: lightsalmon;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+    background-color: burlywood;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 1%;
+    
+}
+.div-campo {
+    font-size: large;
+    width: 95%;
+    margin-left: 1%;
+    margin-top: 11px;
+}
+
+.campo {
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#label-informacao {
+    margin-left: 47%;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.botao {
+    background-color: #cc7d2f;
+    color: black;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 130px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: large;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

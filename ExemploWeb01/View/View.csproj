@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Cadastro.css" />
+    <Content Include="Content\Editar.css" />
     <Content Include="Content\EstoqueIndex.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

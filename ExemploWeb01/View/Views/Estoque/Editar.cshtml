@@ -9,28 +9,34 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Editar</title>
+    <link rel="stylesheet" href="~/Content/Editar.css" />
 </head>
 <body>
 
+    <label for="campo-nome" id="label-informacao">Alterar</label>
     <form action="/estoque/update" method="post">
 
-        <div>
+        <div class="div-campo">
             <label for="campo-nome">Nome</label>
-            <input type="text" name="nome" id="campo-nome" value="@ViewBag.Estoque.Nome"/>
+            <input class="campo" type ="text" name="nome" id="campo-nome" value="@ViewBag.Estoque.Nome"/>
         </div>
 
-        <div>
+        <div class="div-campo">
             <label for="campo-quantidade">Quantidade</label>
-            <input type="text" name="quantidade" id="campo-quantidade" value="@ViewBag.Estoque.Quantidade" />
+            <input class="campo" type="text" name="quantidade" id="campo-quantidade" value="@ViewBag.Estoque.Quantidade" />
         </div>
 
-        <div>
+        <div class="div-campo">
             <label for="campo-valor">Valor</label>
-            <input type="text" name="valor" id="campo-valor" value="@ViewBag.Estoque.Valor"/>
+            <input class="campo" type="text" name="valor" id="campo-valor" value="@ViewBag.Estoque.Valor"/>
         </div>
+
+       
 
         <input type="hidden" name="id" value="@ViewBag.Estoque.Id" />
-        <button type="submit">Alterar</button>
+        <button class="botao" type="submit">Alterar</button>
+
+        
     </form>
 
 
